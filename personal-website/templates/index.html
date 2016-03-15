@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Author" content="Tamer Barsbay">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+
+        <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700|Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+
+        <!-- Use an HTML Import to bring in some elements. -->
+        <link rel="import" href="bower_components/polymer/polymer.html">
+        <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+        <link rel="import" href="bower_components/iron-icons/social-icons.html">
+        <link rel="import" href="bower_components/iron-icons/communication-icons.html">
+        <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+        <link rel="import" href="bower_components/paper-styles/paper-styles.html" />
+        <link rel="import" href="bower_components/paper-card/paper-card.html">
+        <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+        <link rel="import" href="bower_components/paper-progress/paper-progress.html">
+        <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+        <link rel="import" href="bower_components/paper-material/paper-material.html">
+		<link rel="import" href="bower_components/paper-tooltip/paper-tooltip.html">
+		<link rel="import" href="bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
+		<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+		
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+		<title>Tamer Barsbay</title>
+
+        <style is="custom-style">
+			paper-scroll-header-panel {
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 5;
+			}
+
+            paper-toolbar {
+				width: 100%;
+                --paper-toolbar-background: #2a2a2c;    
+            }
+
+            paper-card {
+                width: 100%
+                --paper-card-header-color: #2196F3; 
+				--paper-card-header-text: {
+					font-family: 'Roboto', sans-serif;
+					color: white;
+					width: 100%;
+					background-color: rgba(0, 0, 0, 0.4);
+				}
+            }
+
+			.toolbar-icons {
+				margin: 0 auto;
+			}
+
+			.toolbar-icon {
+                margin-left: 16px;
+                margin-right: 16px;
+			}
+
+			h1 {
+				margin-bottom: 16px;
+				font-size: 70px;
+				color: white;
+				font-family: 'Roboto', sans-serif;
+				font-weight: 700;
+				text-align: center;
+			}
+
+			h2.about-me {
+				font-size: 20px;
+				font-family: 'Roboto', sans-serif;
+				font-weight: 700;
+				color: white;
+				text-align: center;
+				font-style: light;
+			}
+
+			h2.projects {
+				margin-top: 32px;
+				margin-bottom: 32px;
+				font-size: 48px;
+				text-align: center;
+				font-family: 'Roboto', sans-serif;
+				font-weight: 300;
+			}
+
+			.header-container {
+				background-image: url('../images/san_francisco_2.jpg');
+				height: 600px;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+
+			.header-content {
+				position: relative;
+				top: 112px;
+			}
+
+			.picture-self {
+				width: 250px;
+				height: auto;
+				display: block;
+				margin: 0 auto;
+				border-radius: 50%;
+				border: 1px solid #000000;
+			}
+		</style>
+	</head>
+	<body fullbleed unresolved>
+
+		<paper-scroll-header-panel fixed>
+			<paper-material elevation="2">
+				<paper-toolbar>
+						<div class="toolbar-icons">
+						<paper-icon-button class="toolbar-icon" icon="social:person" id="btn-about-me"></paper-icon-button>
+						<paper-icon-button class="toolbar-icon" icon="build" id="btn-skills"></paper-icon-button>
+						<paper-icon-button class="toolbar-icon" icon="work" id="btn-projects"></paper-icon-button>
+						<paper-icon-button class="toolbar-icon" icon="communication:email" id="btn-contact"></paper-icon-button>
+						<paper-tooltip for="btn-about-me">About Me</paper-tooltip>
+						<paper-tooltip for="btn-skills">Skills</paper-tooltip>
+						<paper-tooltip for="btn-projects">Projects</paper-tooltip>
+						<paper-tooltip for="btn-contact">Contact Me</paper-tooltip>
+					</div>
+				</paper-toolbar>    
+			</paper-material>
+		</paper-scroll-header-panel>
+
+		<div class="header-container">
+			<div class="header-content">
+				<img class="picture-self" src="../images/profile_picture.png">
+				<br>
+				<h1>Tamer Barsbay</h1>
+				<h2 class="about-me">ANDROID DEVELOPER</h2>
+				<br>
+				<h2 class="about-me">SAN FRANCISCO, CA</h2>
+			</div>
+		</div>
+		<h2 class="projects">Projects</h2>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<paper-material elevation="4">
+						<paper-card class="project-card" heading="Depot" image="../images/preview_depot_chicago.png">
+							<div class="card-content">
+								Info about Depot.
+							</div>
+						</paper-card>
+					</paper-material>
+				</div>
+				<div class="col-md-4">
+					<paper-material elevation="4">
+						<paper-card class="project-card" heading="Luxuper" image="../images/preview_luxuper.png">
+							<div class="card-content">
+								Info about Luxuper.
+							</div>
+						</paper-card>
+					</paper-material>
+				</div>
+				<div class="col-md-4">
+					<paper-material elevation="4">
+						<paper-card class="project-card" heading="Material Dropbox" image="../images/preview_dropbox.png">
+							<div class="card-content">
+								Info about Material Dropbox.
+							</div>
+						</paper-card>
+					</paper-material>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
